@@ -1,3 +1,4 @@
+#! pzn
 # FROM Instruction
 docker build -t dwismu/from 1.from
 docker image ls
@@ -17,3 +18,9 @@ docker build -t dwismu/add 5.add
 docker container create --name add dwismu/add
 docker container start add
 docker container logs add
+#! devops with dian
+docker build -t nginx-ku:latest -q .
+docker run --rm -d --name nginx-ku --cpus="0.1" --memory="10m" -p 8080:80 nginx-ku:latest
+docker exec -it nginx-ku /bin/sh
+which vim
+which curl
