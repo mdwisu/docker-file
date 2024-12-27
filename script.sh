@@ -12,3 +12,8 @@ docker container logs command
 # LABEL Instruction
 docker build -t dwismu/label 4.label
 docker image inspect dwismu/label
+# ADD Instruction
+docker build -t dwismu/add 5.add
+docker container create --name add dwismu/add
+docker container start add
+docker container logs add
