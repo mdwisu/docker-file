@@ -19,8 +19,10 @@ docker container create --name add dwismu/add
 docker container start add
 docker container logs add
 #! devops with dian
+# run instruction
 docker build -t nginx-ku:latest -q .
 docker run --rm -d --name nginx-ku --cpus="0.1" --memory="10m" -p 8080:80 nginx-ku:latest
 docker exec -it nginx-ku /bin/sh
 which vim
 which curl
+# label instruction
