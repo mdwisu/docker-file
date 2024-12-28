@@ -18,7 +18,10 @@ docker build -t dwismu/add 5.add
 docker container create --name add dwismu/add
 docker container start add
 docker container logs add
-# Add & Copy Instruction
+# Copy Instruction
 docker build -t dwismu/add-copy 6.add-copy
 docker run --rm -d --name add-copy --cpus="0.5" --memory="10m" -p 8080:80 dwismu/add-copy
 docker exec -it add-copy ls -l /usr/share/nginx/html
+# EXPOSE Instruction
+docker build -t nginx-ku 7.expose
+docker inspect image nginx-ku
