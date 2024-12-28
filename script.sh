@@ -25,3 +25,8 @@ docker exec -it add-copy ls -l /usr/share/nginx/html
 # EXPOSE Instruction
 docker build -t nginx-ku 7.expose
 docker inspect image nginx-ku
+
+14. docker hub
+docker tag go-hello-world:small dwismu/go-hello-world:small
+docker login -u dwismu
+docker push dwismu/volume
