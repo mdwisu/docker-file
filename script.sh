@@ -18,11 +18,7 @@ docker build -t dwismu/add 5.add
 docker container create --name add dwismu/add
 docker container start add
 docker container logs add
-#! devops with dian
-# run instruction
-docker build -t nginx-ku:latest -q .
-docker run --rm -d --name nginx-ku --cpus="0.1" --memory="10m" -p 8080:80 nginx-ku:latest
-docker exec -it nginx-ku /bin/sh
-which vim
-which curl
-# label instruction
+# Add & Copy Instruction
+docker build -t dwismu/add-copy 6.add-copy
+docker run --rm -d --name add-copy --cpus="0.5" --memory="10m" -p 8080:80 dwismu/add-copy
+docker exec -it add-copy ls -l /usr/share/nginx/html
